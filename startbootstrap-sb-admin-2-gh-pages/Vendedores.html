@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <link rel="icon" href="img/icon.png">
 
-    <title>TechMaster - Facturas</title>
+    <title>TechMaster - Vendedores</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -299,7 +299,7 @@
 
                     <!-- Page Heading -->
                     <div class="d-flex justify-content-between align-items-center mb-4">
-                        <h1 class="h2 mb-2 text-gray-800">Facturas</h1>
+                        <h1 class="h2 mb-2 text-gray-800">Vendedores</h1>
 
                         <div class="d-flex ml-auto align-items-center">
                             <!-- Botón de añadir factura -->
@@ -307,7 +307,7 @@
                                 <span class="icon text-white-20">
                                     <i class="bi bi-plus-lg"></i>
                                 </span>
-                                <span class="text">Añadir Factura</span>
+                                <span class="text">Nuevo Vendedor</span>
                             </a>
 
                             <!-- Barra de búsqueda -->
@@ -331,99 +331,37 @@
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
-                        <div class="card-header py-3 d-flex justify-content-between align-items-center ">
-                            <h5 class="m-0 font-weight-bold text-primary">Historial de Facturas</h5>
-                            <a href="#" class="d-none d-sm-inline-block btn btn-md btn-primary shadow-sm"><i
-                                    class="fas fa-download fa-md text-white-50"></i> Generar Reporte</a>
-                        </div>
                         <div class="card-body mt-n4">
                             <div class="table-responsive">
                                 <table class="table table-striped table-hover table-bordered">
                                     <thead>
                                         <tr>
                                             <th>ID</th>
-                                            <th>Cliente</th>
-                                            <th>Fecha de Emisión</th>
-                                            <th>Tipo de Pago</th>
+                                            <th>Foto</th>
+                                            <th>Nombre</th>
+                                            <th>Dirección</th>
+                                            <th>Teléfono</th>
+                                            <th>Correo</th>
+                                            <th>Fecha de Nacimiento</th>
+                                            <th>Fecha de Contratación</th>
+                                            <th>Porcentaje de Comisión</th>
                                             <th>Estado</th>
-                                            <th>Cantidad de Productos</th>
-                                            <th>Total</th>
-                                            <th>Vendedor</th>
-                                            <th>Comision</th>
                                             <th>Acciones</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>001</td>
-                                            <td>Juan Pérez</td>
-                                            <td>2024-10-01</td>
-                                            <td>Contado</td>
-                                            <td>Pagada</td>
-                                            <td>3</td>
-                                            <td>RD$ 2,500.00</td>
-                                            <td>Pedro Martínez</td>
-                                            <td>RD$ 250.00</td>
-                                            <td>
-                                                <a href="#" class="view" title="View" data-toggle="tooltip"><i
-                                                        class="bi bi-eye-fill"></i></a>
-                                                <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i
-                                                        class="bi bi-vector-pen"></i></a>
-                                                <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i
-                                                        class="bi bi-trash3-fill"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>002</td>
-                                            <td>Ana Rodríguez</td>
-                                            <td>2024-09-30</td>
-                                            <td>Crédito</td>
-                                            <td>Pendiente</td>
-                                            <td>5</td>
-                                            <td>RD$ 3,000.00</td>
-                                            <td>María López</td>
-                                            <td>RD$ 300.00</td>
-                                            <td>
-                                                <a href="#" class="view" title="View" data-toggle="tooltip"><i
-                                                        class="bi bi-eye-fill"></i></a>
-                                                <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i
-                                                        class="bi bi-vector-pen"></i></a>
-                                                <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i
-                                                        class="bi bi-trash3-fill"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>003</td>
-                                            <td>Carlos Gómez</td>
-                                            <td>2024-09-29</td>
-                                            <td>Contado</td>
-                                            <td>Pagada</td>
-                                            <td>2</td>
-                                            <td>RD$ 1,750.00</td>
-                                            <td>Juan Fernández</td>
-                                            <td>RD$ 175.00</td>
-                                            <td>
-                                                <a href="#" class="view" title="View" data-toggle="tooltip"><i
-                                                        class="bi bi-eye-fill"></i></a>
-                                                <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i
-                                                        class="bi bi-vector-pen"></i></a>
-                                                <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i
-                                                        class="bi bi-trash3-fill"></i></a>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>004</td>
-                                            <td>María Fernández</td>
-                                            <td>2024-09-28</td>
-                                            <td>Crédito</td>
-                                            <td>Anulada</td>
                                             <td>1</td>
-                                            <td>RD$ 2,200.00</td>
-                                            <td>Pedro Martínez</td>
-                                            <td>RD$ 220.00</td>
+                                            <td><img src="img/Employee 1.png" style="height: 80px; width: 80px;" alt="Foto de Juan Perez"></td>
+                                            <td>Juan Perez</td>
+                                            <td>Calle 10 #23, Santo Domingo</td>
+                                            <td>(809) 123-4567</td>
+                                            <td>juan.perez@example.com</td>
+                                            <td>1985-07-20</td>
+                                            <td>2015-03-15</td>
+                                            <td>5%</td>
+                                            <td>Activo</td>
                                             <td>
-                                                <a href="#" class="view" title="View" data-toggle="tooltip"><i
-                                                        class="bi bi-eye-fill"></i></a>
                                                 <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i
                                                         class="bi bi-vector-pen"></i></a>
                                                 <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i
@@ -431,18 +369,75 @@
                                             </td>
                                         </tr>
                                         <tr>
-                                            <td>005</td>
-                                            <td>Luisa Martínez</td>
-                                            <td>2024-09-27</td>
-                                            <td>Contado</td>
-                                            <td>Pagada</td>
-                                            <td>4</td>
-                                            <td>RD$ 4,500.00</td>
-                                            <td>María López</td>
-                                            <td>RD$ 450.00</td>
+                                            <td>2</td>
+                                            <td><img src="img/Employee 4.png" style="height: 80px; width: 80px;"  alt="Foto de Maria Gomez">
+                                            </td>
+                                            <td>Maria Gomez</td>
+                                            <td>Calle 8 #45, Santiago</td>
+                                            <td>(809) 765-4321</td>
+                                            <td>maria.gomez@example.com</td>
+                                            <td>1990-05-12</td>
+                                            <td>2017-08-01</td>
+                                            <td>7%</td>
+                                            <td>Activo</td>
                                             <td>
-                                                <a href="#" class="view" title="View" data-toggle="tooltip"><i
-                                                        class="bi bi-eye-fill"></i></a>
+                                                <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i
+                                                        class="bi bi-vector-pen"></i></a>
+                                                <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i
+                                                        class="bi bi-trash3-fill"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td><img src="img/Employee 2.png" style="height: 80px; width: 80px;"  alt="Foto de Carlos Herrera">
+                                            </td>
+                                            <td>Carlos Herrera</td>
+                                            <td>Av. Bolívar #78, Santo Domingo</td>
+                                            <td>(809) 333-4455</td>
+                                            <td>carlos.herrera@example.com</td>
+                                            <td>1987-12-01</td>
+                                            <td>2018-11-20</td>
+                                            <td>6%</td>
+                                            <td>Activo</td>
+                                            <td>
+                                                <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i
+                                                        class="bi bi-vector-pen"></i></a>
+                                                <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i
+                                                        class="bi bi-trash3-fill"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td><img src="img/Employee 5.png" style="height: 80px; width: 80px;"  alt="Foto de Laura Martinez">
+                                            </td>
+                                            <td>Laura Martinez</td>
+                                            <td>Autopista Duarte KM 15, Santo Domingo</td>
+                                            <td>(809) 555-6789</td>
+                                            <td>laura.martinez@example.com</td>
+                                            <td>1992-03-05</td>
+                                            <td>2019-06-10</td>
+                                            <td>8%</td>
+                                            <td>Activo</td>
+                                            <td>
+                                                <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i
+                                                        class="bi bi-vector-pen"></i></a>
+                                                <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i
+                                                        class="bi bi-trash3-fill"></i></a>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td><img src="img/Employee 3.png" style="height: 80px; width: 80px;"  alt="Foto de Pedro Sanchez">
+                                            </td>
+                                            <td>Pedro Sanchez</td>
+                                            <td>Calle Duarte #123, La Vega</td>
+                                            <td>(809) 876-5432</td>
+                                            <td>pedro.sanchez@example.com</td>
+                                            <td>1983-10-15</td>
+                                            <td>2016-09-05</td>
+                                            <td>4%</td>
+                                            <td>Activo</td>
+                                            <td>
                                                 <a href="#" class="edit" title="Edit" data-toggle="tooltip"><i
                                                         class="bi bi-vector-pen"></i></a>
                                                 <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i
