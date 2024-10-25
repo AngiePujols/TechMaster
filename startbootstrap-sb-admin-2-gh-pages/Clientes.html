@@ -314,11 +314,11 @@
                             <div class="p-0" aria-labelledby="searchDropdown">
                                 <form class="form-inline navbar-search">
                                     <div class="input-group">
-                                        <input type="text" class="form-control border-0 small" placeholder="Buscar..."
+                                        <input type="text" class="form-control border-0 small"  id="search" placeholder="Buscar..."
                                             aria-label="Search" aria-describedby="basic-addon2"
                                             style="background-color: #dddddd;">
                                         <div class="input-group-append">
-                                            <button class="btn btn-primary" type="button">
+                                            <button class="btn btn-primary search-button" type="button">
                                                 <i class="fas fa-search fa-sm"></i>
                                             </button>
                                         </div>
@@ -333,17 +333,17 @@
                     <div class="card shadow mb-4">
                         <div class="card-body mt-n4">
                             <div class="table-responsive">
-                                <table class="table table-striped table-hover table-bordered">
-                                    <thead>
+                                <table class="table table-striped table-hover table-bordered table-sm text-center" style="font-size: 0.87rem;"> <!-- Adjusted font size here -->
+                                    <thead> 
                                         <tr>
-                                            <th>ID</th>
-                                            <th>Nombre Comercial</th>
-                                            <th>RNC/Cédula</th>
-                                            <th>Dirección</th>
-                                            <th>Teléfono</th>
-                                            <th>Correo</th>
-                                            <th>Estado</th>
-                                            <th>Acciones</th>
+                                            <th id="clienteId" style="padding: 0.3rem; width: 40px;">ID</th>
+                                            <th style="padding: 0.3rem; width: 170px;">Nombre Comercial</th>
+                                            <th style="padding: 0.3rem; width: 120px;">RNC/Cédula</th>
+                                            <th style="padding: 0.3rem; width: 200px;">Dirección</th>
+                                            <th style=" width: 150px;">Teléfono</th>
+                                            <th style="padding: 0.3rem; ">Correo</th>
+                                            <th style="padding: 0.3rem; width: 110px;">Estado</th>
+                                            <th style="padding: 0.3rem;">Acciones</th>
                                         </tr>
                                     </thead>
                                     <tbody id="tableRows"></tbody>

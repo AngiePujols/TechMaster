@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <link rel="icon" href="img/icon.png">
 
-    <title>TechMaster - Nuevo Cliente</title>
+    <title>TechMaster - Editar Cliente</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -299,7 +299,7 @@
 
                     <!-- Page Heading -->
                     <div class="d-flex justify-content-between align-items-center mb-4">
-                        <h1 class="h2 mb-2 text-gray-800">Nuevo Clientes</h1>
+                        <h1 class="h2 mb-2 text-gray-800">Editar Cliente</h1>
 
                         <div class="d-flex ml-auto align-items-center">
                           
@@ -324,49 +324,64 @@
                         <div class="card-body">
                             <form id="customerForm">
                                 <div class="form-row">
-                                    
+                                    <!-- Campo ID -->
+                                    <div class="form-group col-md-6">
+                                        <div class="input-group" style="width: 100px;">
+                                            <label for="id" class="input-group-text">ID</label>
+                                            <input type="text" class="form-control" id="id" name="id" disabled>
+                                        </div>
+                                    </div>
                                     <div class="form-group col-md-6">
                                         <label for="nombreComercial">Nombre Comercial</label>
-                                        <input type="text" class="form-control" id="nombreComercial"
-                                            name="nombreComercial" placeholder="Ej: Cecomsa" required>
+                                        <input type="text" class="form-control" id="nombreComercial" name="nombreComercial"
+                                            placeholder="Ej: Cecomsa" required>
                                     </div>
+                                </div>
+                            
+                                <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label for="direccion">Dirección</label>
                                         <input type="text" class="form-control" id="direccion" name="direccion"
                                             placeholder="Ej: Av. Independencia #123" required>
                                     </div>
-                                </div>
-
-                                <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label for="rncCedula">RNC/Cédula</label>
                                         <input type="text" class="form-control" id="rncCedula" name="rncCedula"
                                             placeholder="Ej: 001-1234567-8" required>
                                     </div>
+                                </div>
+                            
+                                <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label for="correo">Correo</label>
                                         <input type="email" class="form-control" id="correo" name="correo"
                                             placeholder="Ej: ejemplo@correo.com" required>
                                     </div>
-                                </div>
-
-                                <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label for="telefono">Teléfono</label>
                                         <input type="text" class="form-control" id="telefono" name="telefono"
-                                            placeholder="Ej: 809-123-4567" required>
+                                            placeholder="Ej: (809) 123-4567" required>
                                     </div>
-                                   
+                                </div>
+                            
+                                <div class="form-row">
+                                    <!-- Campo Estado (Activo o Desactivo) -->
+                                    <div class="form-group col-md-3">
+                                        <label for="activo">Estado</label>
+                                        <select class="form-control" id="activo" name="activo" required>
+                                            <option value="Activo">Activo</option>
+                                            <option value="Desactivo">Desactivo</option>
+                                        </select>
+                                    </div>
                                 </div>
 
-                               
-
+                                <!-- Botones de Guardar y Limpiar -->
                                 <div class="form-row mt-3">
                                     <div class="form-group col-md-12 text-right">
-                                        <button type="submit" class="btn btn-primary btn-lg">Guardar</button>
-                                        <button type="reset" class="btn btn-secondary btn-lg">Limpiar</button>
+                                        <button type="submit" class="btn btn-primary btn-lg">Guardar</button> 
                                     </div>
                                 </div>
+
                             </form>
                         </div>
                     </div>
@@ -428,7 +443,7 @@
         <script src="js/sb-admin-2.min.js"></script>
 
 
-        <script src="Nuevo-Cliente.js"></script>
+        <script src="Editar-cliente.js"></script>
 
 </body>
 
