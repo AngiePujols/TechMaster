@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <link rel="icon" href="img/icon.png">
 
-    <title>TechMaster - Vendedores</title>
+    <title>TechMaster - Nueva Factura</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -43,7 +43,7 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="index.html">
                     <i class="bi bi-receipt-cutoff" style="font-size: 22px;"></i>
                     <span style="font-size: 20px;">Facturas</span></a> <!-- Aumenta el tamaño del texto -->
@@ -65,7 +65,7 @@
             </li>
 
             <!-- Nav Item - Charts -->
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="Vendedores.html">
                     <i class="bi bi-people-fill" style="font-size: 22px;"></i>
                     <span style="font-size: 18px;">Vendedores</span></a> <!-- Aumenta el tamaño del texto -->
@@ -299,117 +299,154 @@
 
                     <!-- Page Heading -->
                     <div class="d-flex justify-content-between align-items-center mb-4">
-                        <h1 class="h2 mb-2 text-gray-800">Vendedores</h1>
+                        <h1 class="h2 mb-2 text-gray-800">Nueva Factura</h1>
 
                         <div class="d-flex ml-auto align-items-center">
-                            <!-- Botón de añadir factura -->
-                            <a href="Nuevo-Vendedor.html" class="btn btn-success btn-icon-split mr-2" style="height: auto;">
+
+                            <!-- Botón de regresar -->
+                            <a href="index.html" class="btn btn-secondary btn-icon-split" style="height: auto;">
                                 <span class="icon text-white-20">
-                                    <i class="bi bi-plus-lg"></i>
+                                    <i class="bi bi-arrow-left"></i>
                                 </span>
-                                <span class="text">Nuevo Vendedor</span>
+                                <span class="text">Regresar</span>
                             </a>
 
-                           <!-- Barra de búsqueda -->
-                           <div class="p-0" aria-labelledby="searchDropdown">
-                            <form class="form-inline navbar-search">
-                                <div class="input-group">
-                                    <input type="text" class="form-control border-0 small"  id="search" placeholder="Buscar..."
-                                        aria-label="Search" aria-describedby="basic-addon2"
-                                        style="background-color: #dddddd;">
-                                    <div class="input-group-append">
-                                        <button class="btn btn-primary search-button" type="button">
-                                            <i class="fas fa-search fa-sm"></i>
-                                        </button>
+
+                        </div>
+                    </div>
+
+
+                    <!-- Content Row -->
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Formulario de Factura</h6>
+                        </div>
+                        <div class="card-body">
+                            <form id="facturaForm">
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="vendedor_id" style="font-weight: bold;">Vendedor</label>
+                                        <select class="form-control" id="vendedor_id" name="vendedor_id" required>
+                                            <option value="" disabled selected>Selecciona un Vendedor</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="cliente_id" style="font-weight: bold;">Cliente</label>
+                                        <select class="form-control" id="cliente_id" name="cliente_id" required>
+                                            <option value="" disabled selected>Selecciona un Cliente</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="condicion_pago_id" style="font-weight: bold;">Condición de
+                                            Pago</label>
+                                        <select class="form-control" id="condicion_pago_id" name="condicion_pago_id"
+                                            required>
+                                            <option value="" disabled selected>Selecciona una Condición de Pago</option>
+                                        </select>
+                                    </div>
+                                 
+                                </div>
+
+                                <div id="detalleContainer">
+                                    <div class="item-group">
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label for="articulo_id" style="font-weight: bold;">Artículo</label>
+                                                <select class="form-control" id="articulo_id" name="articulo_id[]"
+                                                    required>
+                                                    <option value="" disabled selected>Selecciona un Articulo</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-md-3">
+                                                <label for="cantidad" style="font-weight: bold;">Cantidad</label>
+                                                <input type="number" class="form-control" id="cantidad"
+                                                    name="cantidad[]" placeholder="Ej: 10" required>
+                                            </div>
+                                            <div class="form-group col-md-3">
+                                                <button type="button" class="btn btn-danger mt-4"
+                                                    onclick="removeItem(this)">Eliminar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-row mt-3">
+                                    <div class="form-group col-md-12 text-right">
+                                        <button type="button" class="btn btn-success btn-lg" onclick="addItem()">Añadir
+                                            Artículo</button>
+                                    </div>
+                                </div>
+
+                                <div class="form-row mt-3">
+                                    <div class="form-group col-md-12 text-right">
+                                        <button type="submit" class="btn btn-primary btn-lg">Guardar</button>
+                                        <button type="reset" class="btn btn-secondary btn-lg">Limpiar</button>
                                     </div>
                                 </div>
                             </form>
                         </div>
                     </div>
-                </div>
 
-                    <div class="card shadow mb-4">
-                        <div class="card-body mt-n4">
-                            <div class="table-responsive">
-                                <table class="table table-striped table-hover table-bordered table-sm text-center" style="font-size: 0.87rem;"> <!-- Ajuste del tamaño de fuente -->
-                                    <thead>
-                                        <tr>
-                                            <th style="padding: 0.3rem; width: 80px;">ID</th>
-                                            <th style="padding: 0.3rem; width: 100px;">Foto</th> <!-- Ajuste de ancho -->
-                                            <th style="padding: 0.3rem; width: 170px;">Nombre</th>
-                                            <th style="padding: 0.3rem; width: 220px;">Dirección</th> <!-- Ajuste de ancho -->
-                                            <th style="padding: 0.3rem; width: 120px;">Teléfono</th> <!-- Ajuste de ancho -->
-                                            <th style="padding: 0.3rem; width: 150px;">Correo</th> <!-- Ajuste de ancho -->
-                                            <th style="width: 200px;">Fecha de nacimiento</th> <!-- Ajuste de ancho -->
-                                            <th style="width: 200px;">Fecha de Contratación</th> <!-- Ajuste de ancho -->
-                                            <th style="padding: 0.3rem; width: 140px;">Porcentaje de comisión</th> <!-- Ajuste de ancho -->
-                                            <th style="padding: 0.3rem; width: 100px;">Estado</th>
-                                            <th style="padding: 0.3rem;">Acciones</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody id="tableRows"></tbody>
-                                </table> <!-- /.table -->
-                            </div>
+
+                </div>
+                <!-- End of Main Content -->
+
+
+                <!-- Footer -->
+                <footer class="sticky-footer bg-white">
+                    <div class="container my-auto">
+                        <div class="copyright text-center my-auto">
+                            <span>Copyright &copy; TechMaster 2024</span>
                         </div>
                     </div>
-                    <!-- /.container-fluid -->
-                    
+                </footer>
+                <!-- End of Footer -->
 
             </div>
-            <!-- End of Main Content -->
+            <!-- End of Content Wrapper -->
 
+        </div>
+        <!-- End of Page Wrapper -->
 
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; TechMaster 2024</span>
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="fas fa-angle-up"></i>
+        </a>
+
+        <!-- Logout Modal-->
+        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                        <a class="btn btn-primary" href="login.html">Logout</a>
                     </div>
                 </div>
-            </footer>
-            <!-- End of Footer -->
-
-        </div>
-        <!-- End of Content Wrapper -->
-
-    </div>
-    <!-- End of Page Wrapper -->
-
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
-
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
-                </div>
             </div>
         </div>
-    </div>
 
-    <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <!-- Bootstrap core JavaScript-->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+        <!-- Core plugin JavaScript-->
+        <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-    <!-- Custom scripts for all pages-->
-    <script src="js/sb-admin-2.min.js"></script>
-    <script src="Vendedores.js"></script>
+        <!-- Custom scripts for all pages-->
+        <script src="js/sb-admin-2.min.js"></script>
+
+
+        <script src="Nueva-Factura.js"></script>
 
 </body>
 
