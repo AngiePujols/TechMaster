@@ -104,3 +104,7 @@ search.addEventListener('click', function (e) {
         row.style.display = isMatch ? '' : 'none';
     });
 });
+
+//Agregar evento de Print
+
+

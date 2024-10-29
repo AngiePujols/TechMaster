@@ -147,37 +147,40 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-// Evento para el formulario de factura
+// Escucha el evento de envío del formulario
 document.getElementById('facturaForm').addEventListener('submit', function (event) {
     event.preventDefault();
 
-    // Obtener todos los detalles del contenedor de items
-    const detalles = [...document.querySelectorAll('.item-group')].map(itemGroup => {
+    // Captura todos los detalles de la factura en el formato correcto
+    const detalle_Factura = [...document.querySelectorAll('.item-group')].map(itemGroup => {
         const articuloSelect = itemGroup.querySelector('select[name="articulo_id[]"]');
         const cantidadInput = itemGroup.querySelector('input[name="cantidad[]"]');
 
-        // Verificar que ambos valores sean válidos
-        if (articuloSelect && cantidadInput && articuloSelect.value && cantidadInput.value) {
+        // Verificar si articuloSelect y cantidadInput no son null
+        if (articuloSelect && cantidadInput) {
             return {
-                articulo_id: articuloSelect.value,
-                cantidad: parseInt(cantidadInput.value) // Asegúrate de que la cantidad sea un número
+                articulo_id: parseInt(articuloSelect.value), // Captura solo el value del select
+                cantidad: parseInt(cantidadInput.value) // Captura el valor del input de cantidad
             };
+        } else {
+            console.warn("Elemento no encontrado en 'item-group'.");
+            return null; // Devuelve null si no encuentra el elemento
         }
-    }).filter(detalle => detalle); // Filtrar valores no válidos
+    }).filter(item => item !== null); // Filtra elementos nulos en caso de que existan
 
-    // Construir el objeto de factura con todos los datos
+    // Crear el objeto de factura con los datos capturados en el formato que espera la API
     const facturaActualizada = {
-        id: document.getElementById('id').value,
-        vendedor_id: document.getElementById('vendedor_id').value,
-        cliente_id: document.getElementById('cliente_id').value,
-        condicion_pago_id: document.getElementById('condicion_pago_id').value,
+        id: parseInt(document.getElementById('id').value),
+        vendedor_id: parseInt(document.getElementById('vendedor_id').value),
+        cliente_id: parseInt(document.getElementById('cliente_id').value),
+        condicion_pago_id: parseInt(document.getElementById('condicion_pago_id').value),
         fecha: document.getElementById('fecha').value,
-        detalles: detalles // Asegúrate de que esto contenga artículos válidos
+        detalle_Factura: detalle_Factura // Pasar los detalles con el nombre correcto
     };
 
-    console.log('Factura a enviar:', facturaActualizada); // Para depuración
+    console.log('Factura a enviar:', facturaActualizada);
 
-    // Enviar el objeto de factura al endpoint con PUT
+    // Enviar la factura al endpoint mediante PUT
     fetch('https://localhost:7278/api/Facturacion/Update', {
         method: 'PUT',
         headers: {
@@ -194,7 +197,7 @@ document.getElementById('facturaForm').addEventListener('submit', function (even
     .then(data => {
         console.log('Factura actualizada:', data);
         alert('Factura actualizada con éxito');
-        window.location.href = 'index.html'; // Redireccionar después de actualizar
+        window.location.href = 'index.html'; // Redirigir después de la actualización
     })
     .catch(error => {
         console.error('Error al actualizar la factura:', error);
