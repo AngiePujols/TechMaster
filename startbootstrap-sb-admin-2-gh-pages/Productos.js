@@ -74,3 +74,16 @@ search.addEventListener('click', function (e) {
         row.style.display = isMatch ? '' : 'none';
     });
 });
+
+
+// Recupera el nombre del usuario de localStorage y lo muestra en el span
+document.addEventListener('DOMContentLoaded', function () {
+    // Recupera nombre y apellido del usuario
+    const nombreUsuario = localStorage.getItem('nombreUsuario');
+    const apellidoUsuario = localStorage.getItem('apellidoUsuario');
+
+    // Muestra nombre completo en el span
+    if (nombreUsuario && apellidoUsuario) {
+        document.getElementById('userNameDisplay').textContent = `${nombreUsuario} ${apellidoUsuario}`;
+    }
+});

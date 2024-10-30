@@ -259,13 +259,17 @@
 
                         <div class="topbar-divider d-none d-sm-block"></div>
 
-                        <!-- Nav Item - User Information -->
-                        <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Valeria González</span>
-                                <img class="img-profile rounded-circle" src="img/profile.png">
-                            </a>
+                       <!-- Nav Item - User Information -->
+                       <li class="nav-item dropdown no-arrow">
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <!-- Este span mostrará el nombre almacenado -->
+                            <span class="mr-2 d-none d-lg-inline"
+                                style="font-size: large; font-weight: 600; color: black;"
+                                id="userNameDisplay">Usuario</span>
+                            <img class="img-profile rounded-circle" src="img/profile-icon.png"
+                                style="width: 40px ; height: auto ;">
+                        </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
@@ -346,7 +350,7 @@
                                             <option value="" disabled selected>Selecciona una Condición de Pago</option>
                                         </select>
                                     </div>
-                                 
+
                                 </div>
 
                                 <div id="detalleContainer">
@@ -421,19 +425,23 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">¿Listo para salir?</h5>
+                        <!-- Título en español -->
                         <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">×</span>
                         </button>
                     </div>
-                    <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                    <div class="modal-body">Seleccione "Cerrar sesión" a continuación si está listo para finalizar su
+                        sesión actual.</div> <!-- Mensaje en español -->
                     <div class="modal-footer">
-                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                        <a class="btn btn-primary" href="login.html">Logout</a>
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                        <!-- Botón en español -->
+                        <a class="btn btn-primary" href="login.html">Cerrar sesión</a> <!-- Botón en español -->
                     </div>
                 </div>
             </div>
         </div>
+
 
         <!-- Bootstrap core JavaScript-->
         <script src="vendor/jquery/jquery.min.js"></script>

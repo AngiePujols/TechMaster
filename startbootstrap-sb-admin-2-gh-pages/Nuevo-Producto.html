@@ -43,7 +43,7 @@
             <hr class="sidebar-divider my-0">
 
             <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
+            <li class="nav-item">
                 <a class="nav-link" href="index.html">
                     <i class="bi bi-receipt-cutoff" style="font-size: 22px;"></i>
                     <span style="font-size: 20px;">Facturas</span></a> <!-- Aumenta el tamaño del texto -->
@@ -72,7 +72,7 @@
             </li>
 
             <!-- Nav Item - Charts -->
-            <li class="nav-item">
+            <li class="nav-item active">
                 <a class="nav-link" href="Productos.html">
                     <i class="bi bi-basket3-fill" style="font-size: 22px;"></i>
                     <span style="font-size: 18px;">Productos</span></a> <!-- Aumenta el tamaño del texto -->
@@ -263,8 +263,12 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Valeria González</span>
-                                <img class="img-profile rounded-circle" src="img/profile.png">
+                                <!-- Este span mostrará el nombre almacenado -->
+                                <span class="mr-2 d-none d-lg-inline"
+                                    style="font-size: large; font-weight: 600; color: black;"
+                                    id="userNameDisplay">Usuario</span>
+                                <img class="img-profile rounded-circle" src="img/profile-icon.png"
+                                    style="width: 40px ; height: auto ;">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -362,13 +366,13 @@
                                         <input type="text" class="form-control" id="marca" name="marca"
                                             placeholder="Ej: Samsung" required>
                                     </div>
-                                   
+
                                     <div class="form-group col-md-6">
                                         <label for="stock" style="font-weight: bold;">Stock</label>
                                         <input type="number" class="form-control" id="stock" name="stock"
                                             placeholder="Ej: 100" required>
                                     </div>
-                                     <!-- Campo Estado (Activo o Desactivo)
+                                    <!-- Campo Estado (Activo o Desactivo)
                                      <div class="form-group col-md-3">
                                         <label for="Estado">Estado</label>
                                         <select class="form-control" id="Estado" name="Estado" required>
@@ -377,7 +381,7 @@
                                         </select>
                                     </div> -->
                                 </div>
-                               
+
 
                                 <div class="form-row mt-3">
                                     <div class="form-group col-md-12 text-right">
@@ -422,15 +426,18 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">¿Listo para salir?</h5>
+                        <!-- Título en español -->
                         <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">×</span>
                         </button>
                     </div>
-                    <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                    <div class="modal-body">Seleccione "Cerrar sesión" a continuación si está listo para finalizar su
+                        sesión actual.</div> <!-- Mensaje en español -->
                     <div class="modal-footer">
-                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                        <a class="btn btn-primary" href="login.html">Logout</a>
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
+                        <!-- Botón en español -->
+                        <a class="btn btn-primary" href="login.html">Cerrar sesión</a> <!-- Botón en español -->
                     </div>
                 </div>
             </div>
