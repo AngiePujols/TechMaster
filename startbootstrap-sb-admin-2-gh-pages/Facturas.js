@@ -105,6 +105,8 @@ search.addEventListener('click', function (e) {
     });
 });
 
+
+
 // Recupera el nombre del usuario de localStorage y lo muestra en el span
 document.addEventListener('DOMContentLoaded', function () {
     // Recupera nombre y apellido del usuario
@@ -116,3 +118,4 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('userNameDisplay').textContent = `${nombreUsuario} ${apellidoUsuario}`;
     }
 });
+
