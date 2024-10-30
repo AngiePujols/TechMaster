@@ -14,7 +14,6 @@
     }
 }
 
-// Verificación de credenciales con la API
 document.querySelector('.user').addEventListener('submit', function (event) {
     event.preventDefault();
 
@@ -34,8 +33,9 @@ document.querySelector('.user').addEventListener('submit', function (event) {
             );
 
             if (userFound) {
-                // Guardamos el nombre del usuario en localStorage
+                // Guardamos el nombre y apellido en localStorage
                 localStorage.setItem('nombreUsuario', userFound.nombre);
+                localStorage.setItem('apellidoUsuario', userFound.apellido);
 
                 window.location.href = 'index.html';
             } else {
@@ -47,3 +47,4 @@ document.querySelector('.user').addEventListener('submit', function (event) {
             alert('Ha ocurrido un error al verificar las credenciales.');
         });
 });
+
