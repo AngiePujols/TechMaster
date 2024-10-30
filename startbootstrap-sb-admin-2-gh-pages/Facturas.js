@@ -27,7 +27,7 @@ const showdata = (data) => {
 
         // Botones de editar y eliminar
         body += '<td>' +
-            '<a href="#" class="view" title="View" data-toggle="tooltip">' +
+            '<a href="Invoice.html?id=' + factura.id + '"class="view" title="View">' +
             '<i class="bi bi-eye-fill"></i>' +
             '</a>' +
             '<a href="editar-factura.html?id=' + factura.id + '" class="edit" title="Edit">' +

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="img/icon.png">
+
+    <title>TechMaster - Factura Detallada</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .invoice-card {
+            border-radius: 8px;
+            background: #ffffff;
+        }
+
+        .invoice-header {
+            background: #007bff;
+            color: white;
+            padding: 20px 30px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+
+        .invoice-header h2 {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+
+        .invoice-details p,
+        .invoice-footer {
+            font-size: 0.9rem;
+        }
+
+        .table th {
+            background-color: #e9ecef;
+        }
+
+        .total-section .col-md-6 {
+            padding: 10px;
+        }
+
+        .text-primary-custom {
+            color: #007bff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container my-5">
+        <div class="invoice-card shadow-lg">
+            <!-- Header -->
+            <div class="invoice-header text-center">
+                <h2>Factura de Venta</h2>
+                <p class="mb-0">Factura No: <span id="invoice-number"></span></p>
+            </div>
+            <!-- Body -->
+            <div class="card-body px-4 py-4 invoice-body">
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <p><strong>Vendedor:</strong> <span id="vendedor-name"></span></p>
+                        <p><strong>Cliente:</strong> <span id="cliente-name"></span></p>
+                    </div>
+                    <div class="col-md-6 text-md-right">
+                        <p><strong>Condición de Pago:</strong> <span id="condicion-pago"></span></p>
+                        <p><strong>Fecha:</strong> <span id="fecha"></span></p>
+                    </div>
+                </div>
+
+                <!-- Tabla de Artículos -->
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Artículo</th>
+                            <th>Cantidad</th>
+                            <th>Precio Unitario</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody id="invoice-details">
+                        <!-- Las filas se llenarán dinámicamente aquí -->
+                    </tbody>
+                </table>
+
+                <!-- Totales -->
+                <div class="row total-section mt-4">
+                    <div class="col-md-6">
+                        <p class="text-muted">Comisión del Vendedor: <strong id="comision-vendedor"></strong></p>
+                    </div>
+                    <div class="col-md-6 text-md-right">
+                        <p><strong>Subtotal:</strong> RD$ <span id="subtotal"></span></p>
+                        <p><strong>ITBIS:</strong> RD$ <span id="itbis"></span></p>
+                        <p class="h5 text-primary-custom"><strong>Total:</strong> RD$ <span id="total"></span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="card-footer text-center">
+        <p class="mb-3">Gracias por su compra. ¡Esperamos verlo nuevamente!</p>
+        <a href="index.html" class="btn btn-secondary">Regresar</a>
+    </div>
+    </div>
+    </div>
+
+    <!-- Bootstrap JS (Opcional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="Invoice.js"></script>
+</body>
+
+
+</html>
