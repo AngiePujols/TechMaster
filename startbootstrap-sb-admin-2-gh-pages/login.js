@@ -20,7 +20,7 @@ document.querySelector('.user').addEventListener('submit', function (event) {
     const usernameInput = document.getElementById('exampleInputUsername').value;
     const passwordInput = document.getElementById('exampleInputPassword').value;
 
-    fetch('https://localhost:7278/api/Usuario/GetUsuarios')
+    fetch('https://localhost:7167/api/Usuario/GetUsuarios')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Error en la solicitud: ' + response.status);

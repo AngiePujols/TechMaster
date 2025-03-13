@@ -330,40 +330,44 @@
                                 <div class="form-row">
 
                                     <div class="form-group col-md-6">
-                                        <label for="nombreComercial">Nombre Comercial</label>
-                                        <input type="text" class="form-control" id="nombreComercial"
-                                            name="nombreComercial" placeholder="Ej: Cecomsa" required>
+                                        <label for="nombre">Nombre</label>
+                                        <input type="text" class="form-control" id="nombre" name="nombre"
+                                            placeholder="Ej: Juan" required>
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label for="direccion">Dirección</label>
-                                        <input type="text" class="form-control" id="direccion" name="direccion"
-                                            placeholder="Ej: Av. Independencia #123" required>
+                                        <label for="apellido">Apellido</label>
+                                        <input type="text" class="form-control" id="apellido" name="apellido"
+                                            placeholder="Ej: Pérez" required>
                                     </div>
                                 </div>
 
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
-                                        <label for="rncCedula">RNC/Cédula</label>
-                                        <input type="text" class="form-control" id="rncCedula" name="rncCedula"
+                                        <label for="cedula">Cédula</label>
+                                        <input type="text" class="form-control" id="cedula" name="cedula"
                                             placeholder="Ej: 001-1234567-8" required>
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label for="correo">Correo</label>
-                                        <input type="email" class="form-control" id="correo" name="correo"
-                                            placeholder="Ej: ejemplo@correo.com" required>
+                                        <label for="noTarjetaCredito">No. Tarjeta de Crédito</label>
+                                        <input type="text" class="form-control" id="noTarjetaCredito"
+                                            name="noTarjetaCredito" placeholder="Ej: 1234-5678-9876-5432" required>
                                     </div>
                                 </div>
 
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
-                                        <label for="telefono">Teléfono</label>
-                                        <input type="text" class="form-control" id="telefono" name="telefono"
-                                            placeholder="Ej: 809-123-4567" required>
+                                        <label for="limiteCredito">Límite de Crédito</label>
+                                        <input type="text" class="form-control" id="limiteCredito" name="limiteCredito"
+                                            placeholder="Ej: RD$ 10000.00" required>
                                     </div>
-
+                                    <div class="form-group col-md-6">
+                                        <label for="tipoPersona">Tipo de Persona</label>
+                                        <select class="form-control" id="tipoPersona" name="tipoPersona" required>
+                                            <option value="Física">Física</option>
+                                            <option value="Jurídica">Jurídica</option>
+                                        </select>
+                                    </div>
                                 </div>
-
-
 
                                 <div class="form-row mt-3">
                                     <div class="form-group col-md-12 text-right">
@@ -374,6 +378,7 @@
                             </form>
                         </div>
                     </div>
+
                     <!-- /.container-fluid -->
 
                 </div>

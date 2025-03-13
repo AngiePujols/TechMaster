@@ -320,75 +320,80 @@
                     </div>
 
 
-                    <!-- Pretty Customer Form Example -->
-                    <div class="card shadow mb-4">
-                        <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">Formulario de Cliente</h6>
-                        </div>
-                        <div class="card-body">
-                            <form id="customerForm">
-                                <div class="form-row">
-                                    <!-- Campo ID -->
-                                    <div class="form-group col-md-6">
-                                        <div class="input-group" style="width: 100px;">
-                                            <label for="id" class="input-group-text">ID</label>
-                                            <input type="text" class="form-control" id="id" name="id" disabled>
-                                        </div>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="nombreComercial">Nombre Comercial</label>
-                                        <input type="text" class="form-control" id="nombreComercial"
-                                            name="nombreComercial" placeholder="Ej: Cecomsa" required>
-                                    </div>
-                                </div>
-
-                                <div class="form-row">
-                                    <div class="form-group col-md-6">
-                                        <label for="direccion">Dirección</label>
-                                        <input type="text" class="form-control" id="direccion" name="direccion"
-                                            placeholder="Ej: Av. Independencia #123" required>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="rncCedula">RNC/Cédula</label>
-                                        <input type="text" class="form-control" id="rncCedula" name="rncCedula"
-                                            placeholder="Ej: 001-1234567-8" required>
-                                    </div>
-                                </div>
-
-                                <div class="form-row">
-                                    <div class="form-group col-md-6">
-                                        <label for="correo">Correo</label>
-                                        <input type="email" class="form-control" id="correo" name="correo"
-                                            placeholder="Ej: ejemplo@correo.com" required>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="telefono">Teléfono</label>
-                                        <input type="text" class="form-control" id="telefono" name="telefono"
-                                            placeholder="Ej: (809) 123-4567" required>
-                                    </div>
-                                </div>
-
-                                <div class="form-row">
-                                    <!-- Campo Estado (Activo o Desactivo) -->
-                                    <div class="form-group col-md-3">
-                                        <label for="activo">Estado</label>
-                                        <select class="form-control" id="activo" name="activo" required>
-                                            <option value="Activo">Activo</option>
-                                            <option value="Desactivo">Desactivo</option>
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <!-- Botones de Guardar y Limpiar -->
-                                <div class="form-row mt-3">
-                                    <div class="form-group col-md-12 text-right">
-                                        <button type="submit" class="btn btn-primary btn-lg">Guardar</button>
-                                    </div>
-                                </div>
-
-                            </form>
-                        </div>
+                  <!-- Pretty Customer Form Example -->
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <h6 class="m-0 font-weight-bold text-primary">Formulario de Cliente</h6>
+    </div>
+    <div class="card-body">
+        <form id="customerForm">
+            <div class="form-row">
+                <!-- Campo ID -->
+                <div class="form-group col-md-6">
+                    <div class="input-group" style="width: 100px;">
+                        <label for="id" class="input-group-text">ID</label>
+                        <input type="text" class="form-control" id="id" name="id" disabled>
                     </div>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" name="nombre"
+                        placeholder="Ej: Juan" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="apellido">Apellido</label>
+                    <input type="text" class="form-control" id="apellido" name="apellido"
+                        placeholder="Ej: Pérez" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="cedula">Cédula</label>
+                    <input type="text" class="form-control" id="cedula" name="cedula"
+                        placeholder="Ej: 001-1234567-8" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="noTarjetaCredito">Número de Tarjeta de Crédito</label>
+                    <input type="text" class="form-control" id="noTarjetaCredito" name="noTarjetaCredito"
+                        placeholder="Ej: 1234-5678-9012-3456" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="limiteCredito">Límite de Crédito</label>
+                    <input type="text" class="form-control" id="limiteCredito" name="limiteCredito" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="tipoPersona">Tipo de Persona</label>
+                    <select class="form-control" id="tipoPersona" name="tipoPersona" required>
+                        <option value="Física">Física</option>
+                        <option value="Jurídica">Jurídica</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="estado">Estado</label>
+                    <select class="form-control" id="estado" name="estado" required>
+                        <option value="Activo">Activo</option>
+                        <option value="Inactivo">Inactivo</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Botones de Guardar y Limpiar -->
+            <div class="form-row mt-3">
+                <div class="form-group col-md-12 text-right">
+                    <button type="submit" class="btn btn-primary btn-lg">Guardar</button>
+                    <button type="button" class="btn btn-secondary btn-lg ml-2" onclick="limpiarFormulario()" id="limpiarBtn">Limpiar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
                     <!-- /.container-fluid -->
 
                 </div>

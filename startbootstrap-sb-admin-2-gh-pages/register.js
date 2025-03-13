@@ -33,7 +33,7 @@ document.getElementById('user').addEventListener('submit', function (event) {
     console.log('Nuevo usuario:', nuevoUser);
 
     // Realiza la solicitud POST
-    fetch('https://localhost:7278/api/Usuario/Save', {
+    fetch('https://localhost:7167/api/Usuario/Save', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
