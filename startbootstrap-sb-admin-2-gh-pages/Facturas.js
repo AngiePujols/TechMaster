@@ -1,4 +1,4 @@
-fetch("https://localhost:7278/api/Facturacion/GetFacturas")
+fetch("https://localhost:7167/api/Vehiculo/GetVehiculos")
     .then(response => {
         if (!response.ok) throw new Error('Error al obtener las facturas');
         return response.json();
@@ -12,35 +12,31 @@ fetch("https://localhost:7278/api/Facturacion/GetFacturas")
 
 const showdata = (data) => {
     let body = '';
-    for (let factura of data) {
+    for (let vehiculo of data) {
         body += '<tr>';
-        body += '<td>' + factura.id + '</td>';
-        body += '<td>' + (factura.clienteNombre) + '</td>'; // Nombre del cliente
-        body += '<td>' + formatDate(factura.fecha) + '</td>'; // Formato de fecha
-        body += '<td>' + (factura.condicionPagoNombre) + '</td>'; // Condición de pago
-        body += '<td>' + formatCurrency(factura.total) + '</td>'; // Mostrar el total con formato
-        body += '<td>' + (factura.vendedorNombre) + '</td>'; // Nombre del vendedor
+        body += '<td>' + vehiculo.id + '</td>'; // ID del vehículo
+        body += '<td>' + (vehiculo.tipoVehiculoNombre) + '</td>'; // Tipo de vehículo
+        body += '<td>' + (vehiculo.marcaNombre) + '</td>'; // Marca del vehículo
+        body += '<td>' + (vehiculo.modeloNombre) + '</td>'; // Modelo del vehículo
+        body += '<td>' + (vehiculo.tipoCombustibleNombre) + '</td>'; // Tipo de combustible
+        body += '<td>' + vehiculo.placa + '</td>'; // Placa del vehículo
+        body += '<td>' + vehiculo.estado + '</td>'; // Estado del vehículo
 
-        // Calcular la comisión
-        const comisionMonto = (factura.total * (factura.vendedorComision / 100)).toFixed(2); // Calcular el monto de la comisión
-        body += '<td>' + formatCurrency(comisionMonto) + '</td>'; // Mostrar el monto de la comisión
-
-        // Botones de editar y eliminar
+        // Botones de acciones
         body += '<td>' +
-            '<a href="Invoice.html?id=' + factura.id + '"class="view" title="View">' +
+            '<a href="detalle-vehiculo.html?id=' + vehiculo.id + '" class="view" title="View">' +
             '<i class="bi bi-eye-fill"></i>' +
             '</a>' +
-            '<a href="editar-factura.html?id=' + factura.id + '" class="edit" title="Edit">' +
+            '<a href="editar-vehiculo.html?id=' + vehiculo.id + '" class="edit" title="Edit">' +
             '<i class="bi bi-vector-pen"></i>' +
             '</a>' +
-            '<a href="#" class="delete" data-id="' + factura.id + '" title="Delete">' +
+            '<a href="#" class="delete" data-id="' + vehiculo.id + '" title="Delete">' +
             '<i class="bi bi-trash3-fill"></i>' +
             '</a>' +
             '</td>';
         body += '</tr>';
     }
-
-    document.getElementById('tableRows').innerHTML = body;
+    document.getElementById('tableRows').innerHTML = body; // Insertar las filas en la tabla
 
     // Agregar eventos de eliminar
     document.querySelectorAll('.delete').forEach(button => {
